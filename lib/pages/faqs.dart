@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:covidcare/dataSource.dart';
 
+
 class FAQPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
