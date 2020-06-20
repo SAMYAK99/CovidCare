@@ -1,10 +1,10 @@
+import 'package:covidcare/Screens/Hospitals.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'Info.dart';
-import 'chat_screen.dart';
 import 'home_screen.dart';
 import 'stats_screen.dart';
-import 'GooglrMaps.dart';
 
 class BottomNavScreen extends StatefulWidget {
   @override
@@ -16,10 +16,10 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
 
 // creating all pages
   final home = new HomeScreen();
-  final chat = new ChatScreen();
+  final chat = new WebView();
   final stat = new StatsScreen();
   final info = new Info();
-  final map = new maps();
+  final map = new PlacesPage();
 
   Widget showPage = new HomeScreen();
 

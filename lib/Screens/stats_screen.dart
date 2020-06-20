@@ -59,19 +59,6 @@ class _StatsScreenState extends State<StatsScreen> {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Container(
-                height: 100,
-                alignment: Alignment.center,
-                padding: EdgeInsets.all(10),
-                color: Colors.orange[100],
-                child: Text(
-                  DataSource.quote,
-                  style: TextStyle(
-                      color: Colors.orange[800],
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16),
-                ),
-              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),

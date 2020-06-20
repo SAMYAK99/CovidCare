@@ -33,7 +33,7 @@ dependencies:
   shared_preferences:
   http:
   dynamic_theme:
-  pie_chart:
+  webview_flutter:
 
 dev_dependencies:
   flutter_test:
