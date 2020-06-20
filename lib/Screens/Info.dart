@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class Info extends StatefulWidget {
   @override
@@ -8,20 +9,19 @@ class Info extends StatefulWidget {
 class _InfoState extends State<Info> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.purpleAccent,
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Info Page',
-            style: TextStyle(
-              fontSize: 25.0,
-            ),
-          )
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Covid-19 tracker'),
+        backgroundColor: Colors.deepOrangeAccent,
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: WebView(
+          javascriptMode: JavascriptMode.unrestricted,
+          initialUrl:
+              'https://www.bing.com/covid/local/raipur_chhattisgarh_india?form=C19ANS',
+        ),
       ),
     );
   }

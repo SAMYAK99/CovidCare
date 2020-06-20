@@ -1,4 +1,5 @@
 import 'package:covidcare/Screens/Hospitals.dart';
+import 'package:covidcare/Screens/chat_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -16,7 +17,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
 
 // creating all pages
   final home = new HomeScreen();
-  final chat = new WebView();
+  final chat = new Chat();
   final stat = new StatsScreen();
   final info = new Info();
   final map = new PlacesPage();

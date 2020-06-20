@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class ChatScreen extends StatefulWidget {
+class Chat extends StatefulWidget {
   @override
-  _ChatScreenState createState() => _ChatScreenState();
+  _ChatState createState() => _ChatState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _ChatState extends State<Chat> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.purpleAccent,
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Chat Screen',
-            style: TextStyle(
-              fontSize: 25.0,
-            ),
-          )
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Covid-19 tracker'),
+        backgroundColor: Colors.deepOrangeAccent,
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: WebView(
+          javascriptMode: JavascriptMode.unrestricted,
+          initialUrl:
+              'https://covid.apollo247.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=bot_scanner',
+        ),
       ),
     );
   }
