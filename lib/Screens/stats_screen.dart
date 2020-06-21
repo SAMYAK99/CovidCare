@@ -49,7 +49,7 @@ class _StatsScreenState extends State<StatsScreen> {
         title: Text(
           'COVID-19 Statistics',
         ),
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Color(0XFF8d12fe),
       ),
       body: Center(
         child: RefreshIndicator(

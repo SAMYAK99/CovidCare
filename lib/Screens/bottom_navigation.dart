@@ -51,9 +51,9 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         //initialIndex : pageIndex,
-        color: Colors.white,
-        backgroundColor: Colors.purpleAccent,
-        buttonBackgroundColor: Colors.white,
+        color: Color(0XFF8d12fe),
+        backgroundColor: Colors.white70,
+        buttonBackgroundColor: Color(0XFF8d12fe),
         height: 60,
         items: [
           Icon(Icons.dashboard, size: 30),

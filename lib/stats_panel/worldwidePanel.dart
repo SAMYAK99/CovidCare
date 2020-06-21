@@ -8,35 +8,30 @@ class WorldwidePanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: GridView(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 2),
+      height: MediaQuery.of(context).size.height * 0.25,
+      child: Column(
         children: <Widget>[
-          StatusPanel(
-            title: 'CONFIRMED',
-            panelColor: Colors.red[100],
-            textColor: Colors.red,
-            count: worldData['cases'].toString(),
+          Flexible(
+            child: Row(
+              children: <Widget>[
+                _buildStatCard('Total Cases', worldData['cases'].toString(),
+                    Colors.orange),
+                _buildStatCard(
+                    'Deaths', worldData['deaths'].toString(), Colors.red),
+              ],
+            ),
           ),
-          StatusPanel(
-            title: 'ACTIVE',
-            panelColor: Colors.blue[100],
-            textColor: Colors.blue[900],
-            count: worldData['active'].toString(),
-          ),
-          StatusPanel(
-            title: 'RECOVERED',
-            panelColor: Colors.green[100],
-            textColor: Colors.green,
-            count: worldData['recovered'].toString(),
-          ),
-          StatusPanel(
-            title: 'DEATHS',
-            panelColor: Colors.grey[400],
-            textColor: Colors.grey[900],
-            count: worldData['deaths'].toString(),
+          Flexible(
+            child: Row(
+              children: <Widget>[
+                _buildStatCard('Recovered', worldData['recovered'].toString(),
+                    Colors.green),
+                _buildStatCard(
+                    'Active', worldData['active'].toString(), Colors.lightBlue),
+                _buildStatCard('Critical', worldData['critical'].toString(),
+                    Colors.purple),
+              ],
+            ),
           ),
         ],
       ),
@@ -44,40 +39,37 @@ class WorldwidePanel extends StatelessWidget {
   }
 }
 
-class StatusPanel extends StatelessWidget {
-  final Color panelColor;
-  final Color textColor;
-  final String title;
-  final String count;
-
-  const StatusPanel(
-      {Key key, this.panelColor, this.textColor, this.title, this.count})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-
-    return Container(
-      margin: EdgeInsets.all(10),
-      height: 80,
-      width: width / 2,
-      color: panelColor,
+Expanded _buildStatCard(String title, String count, MaterialColor color) {
+  return Expanded(
+    child: Container(
+      margin: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(10.0),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(10.0),
+      ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             title,
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 16, color: textColor),
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 15.0,
+              fontWeight: FontWeight.w600,
+            ),
           ),
           Text(
             count,
-            style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.bold, color: textColor),
-          )
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
-    );
-  }
+    ),
+  );
 }

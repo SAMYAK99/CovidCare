@@ -12,7 +12,7 @@ class _ChatState extends State<Chat> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Appolo ChatBot'),
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Color(0XFF8d12fe),
       ),
       body: Container(
         height: double.infinity,

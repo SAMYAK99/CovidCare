@@ -12,7 +12,7 @@ class _InfoState extends State<Info> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Quick Information'),
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Color(0XFF8d12fe),
       ),
       body: Container(
         height: double.infinity,

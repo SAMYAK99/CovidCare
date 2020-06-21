@@ -15,7 +15,7 @@ class Placestate extends State<PlacesPage> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Nearby Hospitals"),
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Color(0XFF8d12fe),
       ),
       body: _createContent(),
     );

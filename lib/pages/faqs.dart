@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:covidcare/dataSource.dart';
 
-
 class FAQPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('FAQs'),
+        backgroundColor: Color(0XFF8d12fe),
       ),
       body: ListView.builder(
           itemCount: DataSource.questionAnswers.length,
