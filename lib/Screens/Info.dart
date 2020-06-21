@@ -11,8 +11,8 @@ class _InfoState extends State<Info> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Covid-19 tracker'),
-        backgroundColor: Colors.deepOrangeAccent,
+        title: Text('Quick Information'),
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Container(
         height: double.infinity,

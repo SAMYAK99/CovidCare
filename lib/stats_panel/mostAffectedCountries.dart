@@ -13,7 +13,7 @@ class MostAffectedPanel extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return Container(
-            margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Row(
               children: <Widget>[
                 Image.network(
@@ -25,15 +25,17 @@ class MostAffectedPanel extends StatelessWidget {
                 ),
                 Text(
                   countryData[index]['country'],
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 Text(
-                  'Deaths:' + countryData[index]['deaths'].toString(),
-                  style:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                  'Deaths :' + countryData[index]['deaths'].toString(),
+                  style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
                 )
               ],
             ),

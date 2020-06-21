@@ -35,6 +35,7 @@ dependencies:
   dynamic_theme:
   webview_flutter: ^0.3.20
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,5 +1,7 @@
+import 'package:covidcare/Screens/Hospitals.dart';
 import 'package:covidcare/stats_panel/infoPanel.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -19,8 +21,8 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 color: AppColors.mainColor,
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(25),
-                  bottomRight: Radius.circular(25),
+                  bottomLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40),
                 ),
               ),
               padding: EdgeInsets.only(top: 25, bottom: 30),
@@ -213,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Text(
-            "COVID 19",
+            "COVID CARE",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -236,7 +238,8 @@ class _HomeScreenState extends State<HomeScreen> {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Text(
-            "to this fund will help to stop the virus's spread and give\ncommunitieson the font lines.",
+            "Catering to the welfare of people is not only the responsibility"
+            " of the government, but also the citizens",
             style: TextStyle(
               color: Colors.white,
               height: 1.5,
@@ -251,9 +254,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: RaisedButton(
                   color: Colors.blue,
-                  onPressed: () {},
+                  onPressed: () {
+                    String phone = "tel:" + 01123978046.toString();
+                    launch(phone);
+                  },
                   child: Text(
-                    "DONATE NOW",
+                    "CALL NOW",
                     style: TextStyle(color: Colors.white),
                   ),
                   shape: RoundedRectangleBorder(
@@ -268,9 +274,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: RaisedButton(
                   color: Colors.red,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => PlacesPage()));
+                  },
                   child: Text(
-                    "EMERGENCY",
+                    "HOSPITALS",
                     style: TextStyle(color: Colors.white),
                   ),
                   shape: RoundedRectangleBorder(

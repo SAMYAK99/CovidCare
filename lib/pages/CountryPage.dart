@@ -29,6 +29,7 @@ class _CountryPageState extends State<CountryPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Country Stats'),
+        backgroundColor: Colors.purpleAccent,
       ),
       body: countryData == null
           ? Center(
@@ -38,7 +39,7 @@ class _CountryPageState extends State<CountryPage> {
               itemBuilder: (context, index) {
                 return Card(
                   child: Container(
-                    height: 130,
+                    height: 80,
                     margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                     child: Row(
                       children: <Widget>[
@@ -51,12 +52,14 @@ class _CountryPageState extends State<CountryPage> {
                             children: <Widget>[
                               Text(
                                 countryData[index]['country'],
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18.0),
                               ),
                               Image.network(
                                 countryData[index]['countryInfo']['flag'],
                                 height: 50,
-                                width: 60,
+                                width: 80,
                               ),
                             ],
                           ),

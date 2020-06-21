@@ -1,4 +1,3 @@
-import 'package:covidcare/stats_panel/infoPanel.dart';
 import 'package:covidcare/stats_panel/mostAffectedCountries.dart';
 import 'package:covidcare/stats_panel/worldwidePanel.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +32,6 @@ class _StatsScreenState extends State<StatsScreen> {
   Future fetchData() async {
     fetchWorldWideData();
     fetchCountryData();
-    print('fetchData called');
   }
 
   @override
@@ -49,8 +47,9 @@ class _StatsScreenState extends State<StatsScreen> {
         actions: <Widget>[],
         centerTitle: false,
         title: Text(
-          'COVID-19 TRACKER',
+          'COVID-19 Statistics',
         ),
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Center(
         child: RefreshIndicator(
@@ -80,8 +79,9 @@ class _StatsScreenState extends State<StatsScreen> {
                       child: Container(
                           decoration: BoxDecoration(
                               color: primaryBlack,
-                              borderRadius: BorderRadius.circular(15)),
-                          padding: EdgeInsets.all(10),
+                              borderRadius: BorderRadius.circular(20)),
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 50),
                           child: Text(
                             'Regional',
                             style: TextStyle(
@@ -99,10 +99,10 @@ class _StatsScreenState extends State<StatsScreen> {
                       worldData: worldData,
                     ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
                   'Most affected Countries',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
@@ -113,17 +113,16 @@ class _StatsScreenState extends State<StatsScreen> {
                   : MostAffectedPanel(
                       countryData: countryData,
                     ),
-              InfoPanel(),
               SizedBox(
                 height: 20,
               ),
               Center(
                   child: Text(
-                'WE ARE TOGETHER IN THE FIGHT',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                'STAY HOME STAY SAFE',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               )),
               SizedBox(
-                height: 50,
+                height: 40,
               )
             ],
           )),

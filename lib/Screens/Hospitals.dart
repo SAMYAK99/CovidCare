@@ -14,8 +14,8 @@ class Placestate extends State<PlacesPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Nearby places"),
-        backgroundColor: Colors.green,
+        title: new Text("Nearby Hospitals"),
+        backgroundColor: Colors.purpleAccent,
       ),
       body: _createContent(),
     );

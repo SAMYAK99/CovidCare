@@ -11,8 +11,8 @@ class _ChatState extends State<Chat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Covid-19 tracker'),
-        backgroundColor: Colors.deepOrangeAccent,
+        title: Text('Appolo ChatBot'),
+        backgroundColor: Colors.purpleAccent,
       ),
       body: Container(
         height: double.infinity,
