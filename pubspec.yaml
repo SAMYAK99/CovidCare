@@ -14,10 +14,10 @@ dependencies:
 
   cupertino_icons: ^0.1.3
   curved_navigation_bar: ^0.3.3
-  url_launcher: null
-  shared_preferences: null
-  http: null
-  dynamic_theme: null
+  url_launcher:
+  shared_preferences:
+  http:
+  dynamic_theme: 
   webview_flutter: ^0.3.20
   flutter_launcher_icons: ^0.8.1
 
