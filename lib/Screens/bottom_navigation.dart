@@ -1,9 +1,8 @@
-import 'package:covidcare/Screens/Hospitals.dart';
-import 'package:covidcare/Screens/chat_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'Hospitals.dart';
 import 'Info.dart';
+import 'chat_screen.dart';
 import 'home_screen.dart';
 import 'stats_screen.dart';
 
@@ -56,11 +55,11 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         buttonBackgroundColor: Color(0XFF8d12fe),
         height: 60,
         items: [
-          Icon(Icons.dashboard, size: 30),
-          Icon(Icons.map, size: 30),
-          Icon(Icons.home, size: 30),
-          Icon(Icons.chat, size: 30),
-          Icon(Icons.info, size: 30),
+          Icon(Icons.dashboard, size: 30, color: Colors.white,),
+          Icon(Icons.map, size: 30, color: Colors.white,),
+          Icon(Icons.home, size: 30, color: Colors.white,),
+          Icon(Icons.chat, size: 30, color: Colors.white,),
+          Icon(Icons.info, size: 30, color: Colors.white,),
         ],
         animationDuration: Duration(
           milliseconds: 200,
