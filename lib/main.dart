@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:covidcare/Screens/bottom_navigation.dart';
+import 'Screens/SplashScreen.dart';
 
 void main() {
   runApp(covidCare());
@@ -8,8 +8,6 @@ void main() {
 class covidCare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BottomNavScreen(),
-    );
+    return MaterialApp(home: SplashScreen(),debugShowCheckedModeBanner: false,);
   }
 }
