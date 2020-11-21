@@ -11,8 +11,8 @@ CovidCare is the one step solution for all of your issues related Covid-19. Covi
 
 
 ## Screenshots
-<img src="./Screenshots/link3.JPG" >
-<img src="./Screenshots/link3.JPG" >
+<img src="./Screenshots/link0.JPG" >
+<img src="./Screenshots/link1.JPG" >
 
 
 ## Techs Used
