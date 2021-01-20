@@ -15,11 +15,6 @@ CovidCare is the one step solution for all of your issues related Covid-19. Covi
 <img src="./Screenshots/link1.JPG" >
 
 
-## Techs Used
-Covid_Care is developed with Flutter an SDK by Google\
-allowed sdk version: >=2.7.0 <3.0.0
-### Uses 
-Appolo's chatbot Api\
-Bing to show all the places info\
-Lamao Ninja for all the statisticks related data\
-Google Api for finding nearby location
+
+
+
