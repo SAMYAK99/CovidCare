@@ -8,7 +8,7 @@ CovidCare is the one step solution for all of your issues related Covid-19. Covi
 4. All the information about precations and symptoms of Covid-19.
 5. Wanna help community here also Covid_Care can help you with this.
 6. And a tracker too which can help you to get info about all the places.
-
+7. Covid-19 News Headlines
 
 ## Screenshots
 <img src="./Screenshots/link0.JPG" >
