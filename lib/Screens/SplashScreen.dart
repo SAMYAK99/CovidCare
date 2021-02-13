@@ -20,13 +20,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
         duration: const Duration(milliseconds: 1000), vsync: this);
     animation = CurvedAnimation(parent: controller, curve: Curves.easeIn);
 
-    /*animation.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        controller.reverse();
-      } else if (status == AnimationStatus.dismissed) {
-        controller.forward();
-      }
-    });*/
+   
 
     controller.forward();
   }
@@ -58,8 +52,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/images/splash.png',),
-               // Text("COVID CARE", style: TextStyle(color: Color(0XFF8d12fe), fontWeight: FontWeight.w700, fontSize: 45),),
+                Image.asset('assets/images/splash.png',)
               ],
             ),
           ),
